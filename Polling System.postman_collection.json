@@ -1,0 +1,414 @@
+{
+	"info": {
+		"_postman_id": "dcb6e0b1-71b4-4e11-a9d9-5ed137833bd2",
+		"name": "Polling System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20308261"
+	},
+	"item": [
+		{
+			"name": "crate question",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "options",
+							"value": "45",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "options",
+							"value": "85",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "question",
+							"value": "what is this?",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:3000/api/questions/create"
+			},
+			"response": [
+				{
+					"name": "crate question",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "options",
+									"value": "45",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "options",
+									"value": "85",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "question",
+									"value": "what is this?",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:3000/api/questions/create"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "133"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"85-IuaLy1aNP5vbkQI11vUEOXXJkkU\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Aug 2023 10:23:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Question created sucessfully.\",\n    \"data\": {\n        \"question\": \"what is this?\",\n        \"_id\": \"64ec75a0467ffc0a66c2139a\",\n        \"options\": [],\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Options",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "options",
+							"value": "first",
+							"type": "text"
+						},
+						{
+							"key": "options",
+							"value": "second",
+							"type": "text"
+						},
+						{
+							"key": "options",
+							"value": "third",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:3000/api/questions/64ec8eac106bb8b443b11822/options/create"
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "options",
+									"value": "first",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "options",
+									"value": "second",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "options",
+									"value": "third",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:3000/api/questions/64ec75a0467ffc0a66c2139a/options/create"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1144"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"478-j9injAZfi47uZ5kPEfRA9hnAlbI\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Aug 2023 10:45:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"QuestionDocument\": {\n        \"_id\": \"64ec75a0467ffc0a66c2139a\",\n        \"question\": \"what is this?\",\n        \"options\": [\n            {\n                \"id\": \"1628330\",\n                \"option\": \"first\",\n                \"upvote\": 0,\n                \"downvote\": 0,\n                \"link\": \"http://localhost:3000/options/1628330/add_vote\",\n                \"downlink\": \"http://localhost:3000/options/1628330/down_vote\",\n                \"_id\": \"64ec7a9165d8218390b4e66a\"\n            },\n            {\n                \"id\": \"1628331\",\n                \"option\": \"second\",\n                \"upvote\": 0,\n                \"downvote\": 0,\n                \"link\": \"http://localhost:3000/options/1628331/add_vote\",\n                \"downlink\": \"http://localhost:3000/options/1628331/down_vote\",\n                \"_id\": \"64ec7a9165d8218390b4e66b\"\n            },\n            {\n                \"id\": \"1628170\",\n                \"option\": \"first\",\n                \"upvote\": 0,\n                \"downvote\": 0,\n                \"link\": \"http://localhost:3000/options/1628170/add_vote\",\n                \"downlink\": \"http://localhost:3000/options/1628170/down_vote\",\n                \"_id\": \"64ec7abd65d8218390b4e670\"\n            },\n            {\n                \"id\": \"1628171\",\n                \"option\": \"second\",\n                \"upvote\": 0,\n                \"downvote\": 0,\n                \"link\": \"http://localhost:3000/options/1628171/add_vote\",\n                \"downlink\": \"http://localhost:3000/options/1628171/down_vote\",\n                \"_id\": \"64ec7abd65d8218390b4e671\"\n            },\n            {\n                \"id\": \"1628172\",\n                \"option\": \"third\",\n                \"upvote\": 0,\n                \"downvote\": 0,\n                \"link\": \"http://localhost:3000/options/1628172/add_vote\",\n                \"downlink\": \"http://localhost:3000/options/1628172/down_vote\",\n                \"_id\": \"64ec7abd65d8218390b4e672\"\n            }\n        ],\n        \"__v\": 2\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete question",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/api/v1/questions/64ec8eac106bb8b443b11822/delete"
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:3000/api/questions/64ec8eac106bb8b443b11822/delete"
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "63"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3f-bZ+MJaLOESXAo3ceEfGYQiTiNNs\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Aug 2023 12:11:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Question's option has an upvote so question can not be deleted."
+				}
+			]
+		},
+		{
+			"name": "delete specific option",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/api/v1/options/64ec8eb3106bb8b443b11826/delete"
+			},
+			"response": [
+				{
+					"name": "delete specific option",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:3000/api/options/64ec8eb3106bb8b443b11826/delete"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "56"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"38-7pGOeW/2roDsK/rIM0eDxbQdSD4\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Aug 2023 12:31:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Option can not be deleted it has an upvote\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Down Vote",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/api/v1/options/64ec8eb3106bb8b443b11826/down_vote"
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:3000/api/options/64ec8eb3106bb8b443b11826/down_vote"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "323"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"143-uLW16FuWUQLhYfsYLTOdBNyu8eg\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Aug 2023 12:47:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Downvoted option sucessfully\",\n    \"data\": {\n        \"_id\": \"64ec8eb3106bb8b443b11826\",\n        \"question\": \"64ec8eac106bb8b443b11822\",\n        \"option\": \"second\",\n        \"upvote\": 1,\n        \"downvote\": 3,\n        \"__v\": 0,\n        \"downlink\": \"http://localhost:3000/options/64ec8eb3106bb8b443b11826/down_vote\",\n        \"link\": \"http://localhost:3000/options/64ec8eb3106bb8b443b11826/add_vote\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "question get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/api/v1/questions/64ec8eac106bb8b443b11822"
+			},
+			"response": [
+				{
+					"name": "question get",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:3000/api/questions/64ec8eac106bb8b443b11822"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "684"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2ac-3gsohJVoOe5ylK/P26PUCp69Mcw\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Aug 2023 13:01:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"data load sucessfully\",\n    \"data\": {\n        \"question\": {\n            \"_id\": \"64ec8eac106bb8b443b11822\",\n            \"question\": \"what is this?\",\n            \"__v\": 0\n        },\n        \"options\": [\n            {\n                \"_id\": \"64ec8eb3106bb8b443b11826\",\n                \"question\": \"64ec8eac106bb8b443b11822\",\n                \"option\": \"second\",\n                \"upvote\": 1,\n                \"downvote\": 3,\n                \"__v\": 0,\n                \"downlink\": \"http://localhost:3000/options/64ec8eb3106bb8b443b11826/down_vote\",\n                \"link\": \"http://localhost:3000/options/64ec8eb3106bb8b443b11826/add_vote\"\n            },\n            {\n                \"_id\": \"64ec8eb3106bb8b443b11827\",\n                \"question\": \"64ec8eac106bb8b443b11822\",\n                \"option\": \"third\",\n                \"upvote\": 0,\n                \"downvote\": 0,\n                \"__v\": 0,\n                \"downlink\": \"http://localhost:3000/options/64ec8eb3106bb8b443b11827/down_vote\",\n                \"link\": \"http://localhost:3000/options/64ec8eb3106bb8b443b11827/add_vote\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		}
+	]
+}
